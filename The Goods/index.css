@@ -188,3 +188,52 @@ body {
   color: white;
   font-size: 0.9rem;
 }
+
+/* ==========================================================================
+   Mobile-Specific Responsiveness (Targets Phones & Small Screens)
+   ========================================================================== */
+
+@media (max-width: 480px) {
+  /* 1. Restructure the Header for small screens */
+  .page-header {
+    flex-direction: column; /* Stacks title, nav, and button vertically */
+    gap: 15px;
+    padding: 20px;
+    text-align: center;
+    background-position: center;
+  }
+
+  /* 2. Center the navigation links and reset margins */
+  .navBar {
+    margin-right: 0; /* Removes the desktop spacing override */
+    justify-content: center;
+    gap: 20px;
+  }
+
+  /* 3. Convert the Quote button to a scaled-down static element */
+  .floating-quote-btn {
+    position: static; /* Stops floating overlaying the content */
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 0.95rem; /* Scales down font size for small screens */
+    width: fit-content; /* Prevents the button from stretching full-width */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  }
+
+  /* 4. Fix the 9-Picture Grid for mobile viewing */
+  .picture-grid {
+    grid-template-columns: repeat(
+      3,
+      1fr
+    ); /* Changes from 3 columns to 1 single column */
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    padding: 20px;
+  }
+
+  /* 5. Scale down padding on sections so content doesn't look squished */
+  .site-section {
+    padding: 25px 20px;
+    margin: 15px 15px;
+  }
+}
