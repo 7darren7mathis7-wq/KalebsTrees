@@ -193,7 +193,7 @@ body {
    Mobile-Specific Responsiveness (Targets Phones & Small Screens)
    ========================================================================== */
 
-@media (max-width: 480px) {
+@media (max-width: 500px) {
   /* 1. Restructure the Header for small screens */
   .page-header {
     flex-direction: column; /* Stacks title, nav, and button vertically */
